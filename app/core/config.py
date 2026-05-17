@@ -63,7 +63,7 @@ def _get_int(name: str, default: int) -> int:
 settings = Settings(
     app_name=_get("APP_NAME", "Digital Signage API"),
     app_env=_get("APP_ENV", "dev"),
-    database_url=_get("DATABASE_URL", "postgresql+psycopg://signage:signage_pass@localhost:5432/signage"),
+    database_url=_get("DATABASE_URL", "postgresql+psycopg://b2b_user:passwordku@127.0.0.1:5432/b2b_iklan"),
     jwt_secret=_get("JWT_SECRET", "change-me"),
     jwt_alg=_get("JWT_ALG", "HS256"),
     admin_jwt_minutes=_get_int("ADMIN_JWT_MINUTES", 60),
