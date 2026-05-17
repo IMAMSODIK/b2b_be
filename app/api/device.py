@@ -27,7 +27,7 @@ from ..runtime_state import update_device_runtime
 router = APIRouter()
 
 
-@router.post("/enroll", response_model=DeviceEnrollOut)
+@router.post("/api/enroll", response_model=DeviceEnrollOut)
 def enroll(payload: DeviceEnrollIn, request: Request, db: Session = Depends(get_db)):
     enforce_rate_limit(request)
     now = datetime.now(timezone.utc)
